@@ -1,0 +1,28 @@
+.navbar{
+    width: 100%;
+}
+
+.navbar .logo{
+    padding: 10px;
+    text-align: center;
+    font-size: 2.4rem;
+    background: linear-gradient(to right,rgb(223, 61, 183),rgb(218, 77, 77));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+.navbar .logo span{
+    background: none;
+    color: #171717;
+    font-size: 1.03rem;
+    font-weight: 500;
+}
+
+.line{
+    height: 2px;
+    background: linear-gradient(to right,rgb(223, 61, 183),rgb(218, 77, 77));
+    border-radius: 2px;
+    width: 95%;
+    margin: auto;
+}

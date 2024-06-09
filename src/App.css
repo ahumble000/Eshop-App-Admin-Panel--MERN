@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  display: block;
+  width: 5px;  
+  background-color: transparent;
+}
+
+
+body::-webkit-scrollbar-thumb{
+background: linear-gradient(to bottom, rgba(223, 61, 183, 0.75), rgba(218, 77, 77, 0.75));
+height: 250px;
+border-radius: 50px;
+}

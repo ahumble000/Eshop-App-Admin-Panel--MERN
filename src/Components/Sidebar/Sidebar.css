@@ -1,0 +1,38 @@
+.sidebar{
+    width: 100%;
+    position: sticky;
+    margin-top: 10px;
+    max-width: 170px;
+    border-right: 2px solid #62074223;
+}
+
+
+.sidebar ul{
+    margin: 60px auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.sidebar ul li{
+    list-style: none;
+    background: linear-gradient(to right,rgba(223, 61, 183, 0.819),rgba(218, 77, 77, 0.868));
+    width: 140px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebar ul li:hover{
+    transition: all .5s ease-in-out;
+    background: linear-gradient(to right,rgba(231, 35, 182, 0.982),rgba(222, 86, 86, 0.949));
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.2rem;    
+}
