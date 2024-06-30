@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import upload_area from '../Assets/upload_area.png'
+import upload_area from '../../Assets/upload_area.png'
 
 import './AddProduct.css'
 
