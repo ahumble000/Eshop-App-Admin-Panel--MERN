@@ -1,0 +1,99 @@
+.sign-in-form{
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.sign-in-form .sign-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 15px rgba(43, 40, 40, .24);
+}
+
+.sign-in-form .sign-in h2{
+    display: inline-block;
+    position: relative;
+    font-size: 1.8rem;
+    color: #1b1b1b;
+    letter-spacing: 1.5px;
+    /* font-weight: 600; */
+    margin-bottom: 25px;
+}
+
+.sign-in-form .sign-in h2:before{
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(223, 61, 183), rgb(228, 150, 150));
+    transition: all 0.8s ease;  
+}
+
+
+.sign-in-form .sign-in input,
+.sign-in-form .sign-in select{
+    width: 320px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.359);
+    outline: none;
+    margin: 15px;
+}
+
+.sign-in-form .sign-in button{
+    cursor: pointer;
+    width: 320px;
+    background: linear-gradient(to right,rgb(223, 61, 183),rgb(218, 77, 77));
+    border: none;
+    outline: none;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    border-radius: 0;
+    transition: all .4s;
+}
+
+.sign-in-form .sign-in button:hover{
+    background: linear-gradient(to right,rgb(239, 43, 190),rgb(245, 52, 52));
+}
+
+
+
+.sign-in-form .sign-in p {
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: .85rem;
+    color: rgb(245, 52, 52);
+}
+
+@media only screen and (max-width:460px) {
+
+    .sign-in-form .sign-in{
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .sign-in-form .sign-in input,
+    .sign-in-form .sign-in select{
+        width: 260px;
+        margin: 10px;
+    }
+
+    .sign-in-form .sign-in button{
+        width: 260px;
+    }
+    
+}

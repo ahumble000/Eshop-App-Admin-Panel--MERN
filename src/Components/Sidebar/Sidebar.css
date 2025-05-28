@@ -1,9 +1,12 @@
 .sidebar{
     width: 100%;
     position: sticky;
-    margin-top: 10px;
+    top: 5%;
     max-width: 170px;
     border-right: 2px solid #62074223;
+    padding-right: 20px;
+    background: #fff;
+    z-index: 100;
 }
 
 
@@ -12,13 +15,13 @@
     margin-top: 80px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 60px;
 }
 
 .sidebar ul li{
     list-style: none;
     background: linear-gradient(to right,rgba(223, 61, 183, 0.819),rgba(218, 77, 77, 0.868));
-    width: 140px;
+    width: 130px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -34,5 +37,28 @@
 .sidebar ul li a {
     text-decoration: none;
     color: #ffff;
-    font-size: 1.2rem;    
+    font-size: 1.1rem;    
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar{
+        max-width: 170px;
+        padding-right: 20px;
+    }
+    
+    
+    .sidebar ul{
+        margin: 40px auto;
+        margin-top: 100px;
+    }
+    
+    .sidebar ul li{
+        width: 100px;
+        height: 50px;
+    }
+    
+    .sidebar ul li a {
+        font-size: .9rem;    
+    }
+    
 }

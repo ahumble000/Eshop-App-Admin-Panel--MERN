@@ -30,8 +30,6 @@ const UpdateProduct = () => {
   },[productId]);
 
   const productDetail = updateDetails[productId - 1];
-  console.log(productId);
-  console.log(productDetail);
 
  
   useEffect(() => {
@@ -124,9 +122,10 @@ const UpdateProduct = () => {
               <label>Updated Product Category:</label>
               <select name='category' value={productDetails.category} onChange={changeHandler} required>
                 <option value="">Select category</option>
-                <option value="men">Men</option>
-                <option value="women">Women</option>
-                <option value="children">Children</option>
+                <option value="herbal">Herbal</option>
+                <option value="protein">Protein</option>
+                <option value="multivitamins">Multivitamins</option>
+                <option value="probiotics">Probiotics</option>
               </select>
             </div>
             <div className="form-group">

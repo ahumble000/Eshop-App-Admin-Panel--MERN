@@ -1,0 +1,13 @@
+.order-list-headings{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.order-list-items{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.order-list-items .item-name{
+    margin: 5px auto;
+    color: #da5492;
+    font-weight: 500;
+}

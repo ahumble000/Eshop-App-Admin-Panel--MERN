@@ -1,8 +1,24 @@
 .admin{
     max-width: 100%;
-    padding: 5px 30px;
+    padding: 10px;
     display: flex;
-    /* align-items: center; */
     gap: 20px;
 }
 
+
+.sidebar-none{
+    display: none;
+}
+
+.sidebar-block{
+    display: block;
+}
+
+.hamicon{
+    cursor: pointer;
+    color: rgb(250, 110, 140);
+    position: absolute;
+    font-size: 1.5rem;
+    top: 2%;
+    left: 1%;
+}

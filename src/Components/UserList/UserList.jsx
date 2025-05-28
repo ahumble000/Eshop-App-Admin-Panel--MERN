@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { socketService } from '../../services/socket';
 import './UserList.css';
 
 const UserList = () => {
   const [userList, setUserList] = useState([]);
+  const navigate = useNavigate();
 
   const fetchInfo = async () => {
     try {
@@ -16,6 +19,18 @@ const UserList = () => {
 
   useEffect(() => {
     fetchInfo();
+
+    // Setup socket listeners for real-time updates
+    socketService.onUserRemoved((data) => {
+      setUserList(prev => 
+        prev.filter(user => user._id !== data.id)
+      );
+    });
+
+    // Cleanup listeners on unmount
+    return () => {
+      socketService.removeAllListeners();
+    };
   }, []);
 
   const removeUser = async (userId) => {
@@ -29,7 +44,8 @@ const UserList = () => {
       });
 
       if (response.ok) {
-        await fetchInfo();
+        // No need to call fetchInfo() anymore as socket will handle the update
+        console.log('User deleted successfully');
       } else {
         console.error('Failed to delete user');
       }
@@ -40,16 +56,20 @@ const UserList = () => {
 
   return (
     <div className="product-list">
-      <div className="product-list-headings">
+      <div className="user-list-headings product-list-headings">
         <h4>Name</h4>
         <h4>Email</h4>
-        <h4>Password</h4>
+        <h4>Role</h4>
+        <h4>Update</h4>
+        <h4>Remove</h4>
       </div>
 
       {userList.slice().reverse().map((item, i) => (
-        <div key={i} className="product-list-item">
+        <div key={i} className="user-list-item product-list-item">
           <p>{item.name}</p>
           <p>{item.email}</p>
+          <p>{item.role}</p>
+          <button onClick={() => navigate(`/updateuser/${item._id}`)}>Update</button>
           <button onClick={() => removeUser(item._id)}>Remove</button>
         </div>
       ))}

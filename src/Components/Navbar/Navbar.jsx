@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
         <div className="logo">
-                #CAHA <span>ESHOP Admin Panel</span>
+                Nutri <span>SHOP Admin Panel</span>
         </div>
         <div className="line"></div>
     </div>

@@ -1,0 +1,7 @@
+.message-list-headings{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+.message-list-items{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}

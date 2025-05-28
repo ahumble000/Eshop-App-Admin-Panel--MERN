@@ -1,0 +1,8 @@
+
+.user-list-headings {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.user-list-item {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+}
